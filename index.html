@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dynamic And Editable Resume Builder</title>
+  <title>Shareable Resume Builder</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <!-- <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script> -->
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1 class="title">Dynamic And Editable Resume Builder</h1>
+    <h1 class="title">Shareable Resume Builder</h1>
     <form id="resume-form">
     <div class="sectionscontainer">
       
         <!-- Personal Information -->
-        <div class="section">
-          <h2>Personal Information</h2>
+        <fieldset class="section">
+          <legend>Personal Information</legend>
           
+          <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required />
+
               <label for="name">Name:</label>
               <input type="text" id="name" name="name" required />
       
@@ -25,11 +32,11 @@
               <label for="phone">Phone:</label>
               <input type="tel" id="phone" name="phone" required />
           
-        </div>
+        </fieldset>
   
         <!-- Education -->
-        <div class="section">
-          <h2>Education</h2>
+        <fieldset class="section">
+          <legend>Education</legend>
           <label for="highest-education">Highest Education:</label>
           <select id="highest-education" name="highestEducation" required>
             <option value="" disabled selected>Select your education</option>
@@ -48,21 +55,21 @@
   
           <label for="passing-year">Passing Year:</label>
           <input type="text" id="passing-year" name="passingYear" required />
-        </div>
+        </fieldset>
   
         <!-- Skills -->
-        <div class="section">
-          <h2>Skills</h2>
+        <fieldset class="section">
+          <legend>Skills</legend>
           <div class="skills-section">
               <input type="text" id="new-skill" placeholder="Add a skill" />
               <button type="button" id="add-skill">Add Skill</button>
           </div>
           <div id="skills-list"></div>
-        </div>
+        </fieldset>
   
         <!-- Experience -->
-        <div class="section">
-          <h2>Experience</h2>
+        <fieldset class="section">
+          <legend>Experience</legend>
           <label for="company">Company:</label>
           <input type="text" id="company" name="company" required />
   
@@ -71,7 +78,7 @@
   
           <label for="year">Year:</label>
           <input type="text" id="year" name="year" required />
-        </div>
+        </fieldset>
   
         <button type="submit">Generate Resume</button>
       </form>
@@ -81,10 +88,19 @@
    
   </div>
    <!-- Display Resume -->
-   <div id="resume-display">
-    
-   </div>
-   
+   <div id="resume-display"></div>
+<div id="shareable-link-container" style="display: none;">
+  
+  <br><br>
+  <label>Shareable Link</label>
+  <a href="#" id="shareable-link" target="_blank"></a>
+      <br>
+      <div style="display: flex; flex-direction: row; gap: 20px;">
+        <button id="download-pdf">Download As PDF</button>
+        <button id="editButton" class="edit">Edit</button>
+      </div>
+    </div>
+  
    <script src="script.js"></script>
 </body>
 </html>

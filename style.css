@@ -1,269 +1,268 @@
 /* Base styles */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
-  }
-  
-  .container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 40px;
-    background: linear-gradient(to bottom right, rgb(8, 82, 8), gray);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-   
-  }
-  .sectionscontainer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-  
-  .title {
-    text-align: center;
-    font-size: 40px;
-    color: black;
-    margin-bottom: 30px;
-    position: relative;
-  }
-  
-  .title::after {
-    content: "";
-    position: absolute;
-    height: 3px; /* Thickness of the line */
-    width: 100%; /* Make the line width equal to the text width */
-    background-color: white;
-    left: 0;
-    bottom: -20px; /* Position the line below the heading */
-  }
-  
-  .section {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-    background-color: #333;
-    padding: 20px;
-    border-radius: 15px;
-  }
-  
-  .section h2 {
-    color: rgb(9, 151, 9);
-    font-size: 28px;
-  }
-  
-  .section label {
-    margin-bottom: 8px;
-  }
-  
-  input,
-  select {
-    width: calc(100% - 40px);
-    padding: 15px;
-    margin-right: 40px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    border: none;
-    background-color: #444;
-    color: white;
-  }
-  
-  button {
-    width: 100%;
-    height: 65px;
-    background-color:rgb(15, 110, 15);
-    font-size: 20px;
-    font-weight: 900;
-    color: black;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: gray;
-  }
-  
-  .skills-section {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .skills-section button {
-    height: 45px;
-    font-size: 15px;
-  }
-  .skills-section input {
-    width: 100%;
-  }
-  
-  #skills-list span {
-    background-color: gray;
-    color: white;
-    padding: 10px 20px;
-    margin-right: 5px;
-    border-radius: 10px;
-    display: inline-block;
-  }
-  
-  #resume-display {
-    max-width: 920px;
-    margin: 0 auto;
-    margin-bottom: 50px;
-    padding: 40px;
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    border: 5px solid rgb(9, 151, 9);
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #resume-display h1 {
-    color: rgb(9, 151, 9);
-    text-align: center;
-    font-size: 45px;
-    font-weight: 900;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-  }
-  
-  
-  #resume-display h2 {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    color: gray;
-    font-size: 20px;
-    font-weight: 500;
-    position: relative;
-    display: inline-block; /* Make sure the width of h2 adjusts to the text */
-  }
-  
-  #resume-display h2::before, 
-  #resume-display h2::after {
-    content: "";
-    position: absolute;
-    height: 3px; /* Thickness of the line */
-    width: 100%; /* Make the line width equal to the text width */
-    background-color: rgb(9, 151, 9);
-    left: 0;
-  }
-  
-  #resume-display h2::before {
-    top: -2px; /* Position the line above the heading */
-  }
-  
-  #resume-display h2::after {
-    bottom: -2px; /* Position the line below the heading */
-  }
-  
-  .editing {
-    border: 1px solid #4b4b4b;
-    padding: 5px 8px;
-    margin: 3px 10px;
-    border-radius: 5px;
-    background-color: rgba(9, 151, 9, 0.3);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
 }
 
-  .skills-grid div {
-    background-color: rgba(9, 151, 9, 0.5);
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(1, 1, 1, 0.1);
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: linear-gradient(to bottom right, white, gray);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  color: darkcyan;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  height: 3px; /* Thickness of the line */
+  width: 100%; /* Make the line width equal to the text width */
+  background-color: black;
+  left: 0;
+  bottom: -20px; /* Position the line below the heading */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  box-shadow: 0 0 20px rgba(1, 1, 1, 0.5);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.section legend {
+  color: darkcyan;
+  font-size: 28px;
+}
+
+.section label {
+  color: black;
+  margin-bottom: 8px;
+}
+
+input,
+select {
+  width: calc(100% - 40px);
+  padding: 15px;
+  margin-right: 40px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: #838282;
+  color: black;
+}
+
+input:focus {
+  border-color: darkcyan;
+  box-shadow: 0 0 8px darkcyan;
+  outline: none;
+}
+
+button {
+  margin-top: 50px;
+  width: 100%;
+  height: 50px;
+  background-color: darkcyan;
+  font-size: 20px;
+  font-weight: 200;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: gray;
+}
+
+.skills-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.skills-section button {
+  height: 45px;
+  font-size: 15px;
+  margin: 0;
+}
+.skills-section input {
+  width: 100%;
+}
+
+#skills-list span {
+  background-color: gray;
+  color: white;
+  padding: 10px 20px;
+  margin-right: 5px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#shareable-link-container,
+#resume-display {
+  max-width: 920px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 40px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#resume-display h1 {
+  color: darkcyan;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 900;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#resume-display h2 {
+  padding: 10px;
+  border-radius: 5px;
+  color: gray;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  display: inline-block; /* Make sure the width of h2 adjusts to the text */
+}
+
+#resume-display h2::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: darkcyan;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  left: 0;
+}
+
+#resume-display h2::before {
+  top: -2px; /* Position the line above the heading */
+}
+
+.editing {
+  border: 1px solid #4b4b4b;
+  padding: 5px 8px;
+  margin: 3px 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 139, 139, 0.5);
+  font-size: 12px;
+}
+
+.skills-grid div {
+  background-color: rgba(128, 128, 128, 0.3);
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 2px solid darkcyan;
+  box-shadow: 0 4px 8px rgba(1, 1, 1, 0.1);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    margin: 25px;
+    padding: 20px;
   }
-  
+
+  .sectionscontainer {
+    display: flex;
+    flex-direction: column;
+  }
+  #shareable-link-container,
+  #resume-display {
+    max-width: 920px;
+    margin: 20px;
+    padding: 20px;
+  }
+  .title {
+    font-size: 30px;
+  }
+
+  .section h2 {
+    font-size: 22px;
+  }
+
   .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .skills-section {
+    gap: 5px;
+  }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 24px;
     margin-bottom: 20px;
   }
-  
-  /* Responsive styles for tablets and smaller screens */
-  @media (max-width: 768px) {
-    .container {
-      max-width: 100%;
-      margin: 25px;
-      padding: 20px;
-    }
 
-    .sectionscontainer{
-      display: flex;
-      flex-direction: column;
-
-    }
-    #resume-display {
-        max-width: 920px;
-        margin: 20px;
-        padding: 20px;
-      }
-    .title {
-      font-size: 30px;
-    }
-  
-    .section h2 {
-      font-size: 22px;
-    }
-  
-    .skills-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-    }
-    .skills-section {
-      gap: 5px;
-    }
+  .section h2 {
+    font-size: 18px;
   }
-  
-  /* Responsive styles for mobile phones */
-  @media (max-width: 480px) {
-    .container {
-      max-width: 100%;
-      margin: 20px;
-      padding: 15px;
-    }
-    
-  
-    .title {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  
-    .section h2 {
-      font-size: 18px;
-    }
-  
-    input, select {
-      width: 90%; /* Full width for inputs on small screens */
-      margin-right: 0;
-      padding: 12px;
-    }
-  
-    button {
-      font-size: 16px;
-      height: 50px;
-    }
-    .skills-section button {
-        height: 40px;
-      }
-  
-    .skills-grid {
-      grid-template-columns: repeat(2, 1fr); /* One column for smaller screens */
-      gap: 8px;
-    }
 
-    #skills-list span {
-        padding: 5px 15px;
-      }
-
-    #resume-display h1 {
-      font-size: 28px;
-    }
-  
-    #resume-display h2 {
-      font-size: 15px;
-    }
+  input,
+  select {
+    width: 90%; /* Full width for inputs on small screens */
+    margin-right: 0;
+    padding: 12px;
   }
-  
+
+  button {
+    font-size: 16px;
+    height: 50px;
+  }
+  .skills-section button {
+    height: 40px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* One column for smaller screens */
+    gap: 8px;
+  }
+
+  #skills-list span {
+    padding: 5px 15px;
+    text-wrap: wrap;
+  }
+
+  #resume-display h1 {
+    font-size: 28px;
+  }
+
+  #resume-display h2 {
+    font-size: 15px;
+  }
+}
